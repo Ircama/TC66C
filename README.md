@@ -43,12 +43,31 @@ The AES is running in ECB mode, which is nice and simple :grin:
 The key is noted in the python code, which was extracted from the application.
 It did hold me up a bit because Java smali uses signed bytes.
 
+## Install and run
 
+This code works on Linux systems supporting [bluepy](https://github.com/IanHarvey/bluepy). It will not run on Windows, neither with [WSL](https://docs.microsoft.com/windows/wsl).
 
+It is tested on a Raspberry Pi and should also run on x86 Debian Linux.
 
+Installation:
+
+```bash
+pip3 install bluepy
+pip3 install curtsies
+git clone https://github.com/Ralim/TC66C.git
+cd TC66C
+sudo -Es
+python3 scan.py
+```
+
+Avalable keys:
+
+- Screen rotation: press `R`, or `<UP>`, or `<DOWN>`
+- Forward (next panel): press `<RIGHT>`, or `2`
+- Back (previous panel): press `<LEFT>`, or `1`
+
+To terminate, press `Control C` (or the interrupt key), or `Control D`, or `Q`, or `ESC`.
 
 ## BLE Details
 
 ### Exposed services
-
-
